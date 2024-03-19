@@ -11,7 +11,7 @@ export class PalindromeCheckerComponent {
   img: string = '';
 
   check() {
-    const cleanWord = this.word.toLowerCase();
+    const cleanWord = this.word.replace(/\s/g, '').toLowerCase();
     const invertedWord = cleanWord.split('').reverse().join('');
     this.result = cleanWord === invertedWord;
   }

@@ -1,7 +1,11 @@
-<h5>Insira uma palavra</h5>
-<input [(ngModel)]="word" type="text" name="word" id="word" placeholder="mínimo 3 digitos">
-{{check()}}
-<div *ngIf="word.length >= 3">
-  <p>{{ result ? 'é' : 'não é'}} um palíndromo</p>
-  <img src="{{result ? '/assets/sorriso.png' : 'assets/chorando.png'}}" alt="">
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-3 text-center">
+  <h5>Insira uma palavra</h5>
+  <input [(ngModel)]="word" type="text" name="word" id="word" placeholder="mínimo 3 digitos">
+  {{check()}}
+  <div *ngIf="word.length >= 3">
+    <p>{{ result ? 'é' : 'não é'}} um palíndromo</p>
+    <img src="{{result ? '/assets/sorriso.png' : 'assets/chorando.png'}}">
+  </div>
+</div>
 </div>
