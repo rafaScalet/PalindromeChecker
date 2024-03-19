@@ -8,15 +8,11 @@ import { Component } from '@angular/core';
 export class PalindromeCheckerComponent {
   word: string = '';
   result: boolean = false;
+  img: string = '';
 
   check() {
-    if (this.word.length >= 3) {
-      const cleanWord = this.word.toLowerCase();
-      const invertedWord = cleanWord.split('').reverse().join('');
-      return this.result = cleanWord === invertedWord;
-    }else{
-      this.result = false
-      return this.result
-    }
+    const cleanWord = this.word.toLowerCase();
+    const invertedWord = cleanWord.split('').reverse().join('');
+    this.result = cleanWord === invertedWord;
   }
 }
